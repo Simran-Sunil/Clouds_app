@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "620792327811",
+    "firebase_url": "https://clouds-27488.firebaseio.com",
+    "project_id": "clouds-27488",
+    "storage_bucket": "clouds-27488.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:620792327811:android:2f19d5611d606532ecb5b6",
+        "android_client_info": {
+          "package_name": "com.example.notes_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "620792327811-kia0452iurdm97242adqcrfhifg0c0se.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_DnocBFiKx8EASTQMwiRi2TiJ0co4AK0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "620792327811-kia0452iurdm97242adqcrfhifg0c0se.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
