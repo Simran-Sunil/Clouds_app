@@ -41,7 +41,7 @@ class Transition {
 
       case "8th sem":
         Navigator.of(context).push(
-          MaterialPageRoute(builder: (context) => EigthSem()),
+          MaterialPageRoute(builder: (context) => EightSem()),
         );
         break;
 

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:gradient_widgets/gradient_widgets.dart';
-import 'Chat.dart';
 import 'Updates.dart';
 import 'About.dart';
 import 'Events.dart';
@@ -8,6 +7,7 @@ import 'Gallery.dart';
 import 'OfficeBearers.dart';
 import 'TransitionManagement.dart';
 import 'Notes.dart';
+import 'Chat.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,17 +22,15 @@ class MyApp extends StatelessWidget {
       ),
       home: HomePage(),
       routes: <String, WidgetBuilder>{
-      "/profilePage": (BuildContext context) => new HomePage(),
-      "/officeBearers": (BuildContext context) => new OfficeBearers(),
-      "/events": (BuildContext context) => new Events(),
-      "/gallery": (BuildContext context) => new Gallery(),
-      "/about": (BuildContext context) => new About(),
-      "/updates":(BuildContext context)=>new Updates(),
-       "/chat":(BuildContext context)=>new Chat(),
-       "/notes":(BuildContext context)=>new Notes(),
-       
-      
-     },
+        "/profilePage": (BuildContext context) => new HomePage(),
+        "/officeBearers": (BuildContext context) => new OfficeBearers(),
+        "/events": (BuildContext context) => new Events(),
+        "/gallery": (BuildContext context) => new Gallery(),
+        "/about": (BuildContext context) => new About(),
+        "/updates": (BuildContext context) => new Updates(),
+        "/chat": (BuildContext context) => new Chat(),
+        "/notes": (BuildContext context) => new Notes(),
+      },
     );
   }
 }
@@ -51,19 +49,22 @@ class HomePage extends StatelessWidget {
                   end: Alignment.bottomLeft,
                   colors: [Colors.pink, Colors.deepPurple])),
           child: Column(
-            
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Image.asset(
                 'assets/logos.png',
-                width:300,
+                width: 300,
               ),
               RaisedButton(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(18)
-                ),
-                child:Padding(padding: const EdgeInsets.all(8.0),
-                  child: Text("Get Started",style:TextStyle(fontSize: 25,color:Colors.white),),),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      "Get Started",
+                      style: TextStyle(fontSize: 25, color: Colors.white),
+                    ),
+                  ),
                   color: Colors.deepPurple,
                   onPressed: () {
                     Navigator.push(
@@ -94,7 +95,6 @@ class _SecondpageState extends State<SecondPage> {
     "Updates",
     "Chat",
     "Notes",
-    
   ];
 
   @override

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:gradient_widgets/gradient_widgets.dart';
-import 'TransManage.dart';
+import 'ManageNotes.dart';
 import 'package:async/async.dart';
 
 
@@ -19,17 +19,7 @@ class Notes extends StatefulWidget {
 
 class _HomepageState extends State<Notes> {
 
-
-  void getData() async {
-    var data =  Firestore.instance.collection("subject").snapshots();
-    data.listen((onData){
-      onData.documents.forEach((a){
-        print(a.data);
-      });
-    });
-  }
-
-  final List<String> _listViewData = [
+  final List<String> _listViewDatas = [
     "3rd sem",
     "4th sem",
     "5th sem",
@@ -52,12 +42,12 @@ class _HomepageState extends State<Notes> {
         padding: EdgeInsets.all(15.0),
         crossAxisSpacing: 10.0,
         mainAxisSpacing: 12.0,
-        children: _listViewData
+        children: _listViewDatas
             .map(
               (data) => GestureDetector(
                 onTap: ()  {
-                   getData();
-                  // Transition.trans(context, data);
+                   //getData();
+                   Transition.trans(context, data);
                 },
                 child: GradientCard(
                   gradient: Gradients.cosmicFusion,
