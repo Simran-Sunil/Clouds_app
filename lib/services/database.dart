@@ -18,8 +18,8 @@ class DatabaseMethods{
       print(e.toString());
     });
   }
-  createChatRoom(String chatRoomId,chatRoomMap){
-    Firestore.instance.collection("ChatRoom")
+  createChatRoom(String chatRoomId,chatRoomMap) async {
+    await Firestore.instance.collection("ChatRoom")
     .document(chatRoomId).setData(chatRoomMap).catchError((e){
       print(e.toString());
     });
