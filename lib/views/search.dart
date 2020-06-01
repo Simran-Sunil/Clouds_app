@@ -29,6 +29,9 @@ class _SearchScreenState extends State<SearchScreen> {
     getLoggedUserId();
   }
 
+  /**
+ * This will give you the userId of logged user
+ */
   getLoggedUserId() async {
     try{
       var data = await FirebaseAuth.instance.currentUser();
@@ -71,10 +74,19 @@ class _SearchScreenState extends State<SearchScreen> {
         : Container();
   }
 
+  /**
+   * Additional parameter called searchedUserId is added to get the document Id of the 
+   * person who has been tapped or  clicked
+   */
   createChatroomAndStartConversation({String userName , @required String searchUserId}) {
     print("${Constants.myName}");
     if (userName != Constants.myName) {
       // String chatRoomId = getChatRoomId(userName, Constants.myName);
+
+      /**
+       * The reason I did this because you get both userId of yours as well the searched person
+       * Its important, so that it will create a combination of unique Id
+       */
       String chatRoomId = getChatRoomId(searchUserId, myUserId);
 
       List<String> users = [userName, Constants.myName];
@@ -90,6 +102,9 @@ class _SearchScreenState extends State<SearchScreen> {
     }
   }
 
+  /**
+   * New SeachuserId added to pass the same to createchat function
+   */
   Widget SearchTile({String userName, String userEmail, @required String searchUserId}) {
     return Container(
         padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
