@@ -3,26 +3,53 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class DatabaseMethods{
   getUserByUsername(String username) async {
     return await Firestore.instance.collection("users")
-      .where("name", isEqualTo :username)
+      .where("name", isEqualTo :username)                 //3
       .getDocuments();
+    
   }
 
   getUserByUserEmail(String userEmail) async {
-    return await Firestore.instance.collection("users")
+    return await Firestore.instance.collection("users")   //2
       .where("email", isEqualTo :userEmail)
       .getDocuments();
   }
 
-  uploadUserInfo(userMap){
-    Firestore.instance.collection("users").add(userMap).catchError((e){
+  uploadUserInfo(userMap) async{
+    await Firestore.instance.collection("users").add(userMap).catchError((e){    //1
       print(e.toString());
     });
   }
+
   createChatRoom(String chatRoomId,chatRoomMap) async {
-    Firestore.instance.collection("ChatRoom")
-    .document(chatRoomId).setData(chatRoomMap).catchError((e){
+    await Firestore.instance.collection("ChatRoom")
+    .document(chatRoomId).setData(chatRoomMap).catchError((e){            //4
       print(e.toString());
     });
   }
+
+  addConversationMessages(String chatRoomId, messageMap){            //6
+    Firestore.instance.collection("ChatRoom")
+    .document(chatRoomId)
+    .collection("chats")
+    .add(messageMap)
+    .catchError((e){
+      print(e.toString());
+    });
+  }
+
+  getConversationMessages(String chatRoomId) async{
+    return await Firestore.instance.collection("ChatRoom")          //5
+    .document(chatRoomId)
+    .collection("chats")
+    .orderBy("time",descending: false)
+    .snapshots();
+    
+  }
+
+  getChatRooms(String userName) async{
+    return await Firestore.instance.collection("ChatRoom")
+    .where("users",arrayContains:userName)
+    .snapshots();
+  }                                                                   //7
   
 }

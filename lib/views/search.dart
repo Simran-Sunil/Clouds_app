@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:stars_and_clouds/helper/constants.dart';
 import 'package:stars_and_clouds/helper/helperfunctions.dart';
 import 'package:stars_and_clouds/services/database.dart';
@@ -17,8 +18,35 @@ class _SearchScreenState extends State<SearchScreen> {
   DatabaseMethods databaseMethods = new DatabaseMethods();
   TextEditingController searchTextEditingController =
       new TextEditingController();
+  String myUserId;
+
 
   QuerySnapshot searchSnapShot;
+
+  @override
+  initState(){
+    super.initState();
+    getLoggedUserId();
+  }
+
+  /**
+ * This will give you the userId of logged user
+ */
+  getLoggedUserId() async {
+    try{
+      var data = await FirebaseAuth.instance.currentUser();
+      var user = await Firestore.instance.collection("users").where("email",isEqualTo: data.email).getDocuments();
+      user.documents.forEach((element) {
+        setState(() {
+          myUserId = element.documentID;
+        });
+      });
+      
+
+    }catch(err){
+
+    }
+  }
 
   initiateSearch() {
     databaseMethods
@@ -39,16 +67,27 @@ class _SearchScreenState extends State<SearchScreen> {
               return SearchTile(
                 userName: searchSnapShot.documents[index].data['name'],
                 userEmail: searchSnapShot.documents[index].data['email'],
+                searchUserId: searchSnapShot.documents[index].documentID,
               );
             },
           )
         : Container();
   }
 
-  createChatroomAndStartConversation({String userName}) {
+  /**
+   * Additional parameter called searchedUserId is added to get the document Id of the 
+   * person who has been tapped or  clicked
+   */
+  createChatroomAndStartConversation({String userName , @required String searchUserId}) {
     print("${Constants.myName}");
     if (userName != Constants.myName) {
-      String chatRoomId = getChatRoomId(userName, Constants.myName);
+      // String chatRoomId = getChatRoomId(userName, Constants.myName);
+
+      /**
+       * The reason I did this because you get both userId of yours as well the searched person
+       * Its important, so that it will create a combination of unique Id
+       */
+      String chatRoomId = getChatRoomId(searchUserId, myUserId);
 
       List<String> users = [userName, Constants.myName];
       Map<String, dynamic> chatRoomMap = {
@@ -57,13 +96,18 @@ class _SearchScreenState extends State<SearchScreen> {
       };
       DatabaseMethods().createChatRoom(chatRoomId, chatRoomMap);
       Navigator.push(context,
-          MaterialPageRoute(builder: (context) => ConversationScreen()));
+          MaterialPageRoute(builder: (context) => ConversationScreen(
+            chatRoomId
+          )));
     } else {
       print("You cannot send message to yourself");
     }
   }
 
-  Widget SearchTile({String userName, String userEmail}) {
+  /**
+   * New SeachuserId added to pass the same to createchat function
+   */
+  Widget SearchTile({String userName, String userEmail, @required String searchUserId}) {
     return Container(
         padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         child: Row(
@@ -83,6 +127,7 @@ class _SearchScreenState extends State<SearchScreen> {
               onTap: () {
                 createChatroomAndStartConversation(
                   userName: userName,
+                  searchUserId: searchUserId
                 );
               },
               child: Container(
@@ -101,16 +146,13 @@ class _SearchScreenState extends State<SearchScreen> {
         ));
   }
 
-  @override
-  void initState() {
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBarMain(context),
-      body: Container(
+      body:
+        Container(
           child: Column(
         children: [
           Container(
@@ -138,7 +180,9 @@ class _SearchScreenState extends State<SearchScreen> {
                           gradient: LinearGradient(colors: [
                             const Color(0x36FFFFFF),
                             const Color(0x0FFFFFFFF),
-                          ]),
+                          ],
+                          begin: FractionalOffset.topLeft,
+                            end: FractionalOffset.bottomRight),
                           borderRadius: BorderRadius.circular(40)),
                       padding: EdgeInsets.all(12),
                       child: Image.asset('assets/search_logo.png')),
