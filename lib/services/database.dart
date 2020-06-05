@@ -50,6 +50,10 @@ class DatabaseMethods{
     return await Firestore.instance.collection("ChatRoom")
     .where("users",arrayContains:userName)
     .snapshots();
-  }                                                                   //7
-  
+  } 
+
+  getUserFromDocId({String docId}) async {
+    var data = await Firestore.instance.collection("user").document(docId).get();
+    return data.data['name'];
+  }
 }
