@@ -6,6 +6,8 @@ import 'package:flutter_full_pdf_viewer/flutter_full_pdf_viewer.dart';
 import 'package:path_provider/path_provider.dart';
 import 'dart:async';
 
+import 'package:stars_and_clouds/views/conversation_screen.dart';
+
 class Module {
   final String name, url;
   Module(this.name, this.url);
@@ -37,7 +39,7 @@ class _ThirdSemState extends State<ThirdSem> {
           ),
           backgroundColor: Colors.deepPurple,
         ),
-        body: ListViewBuilder());
+        body:ListViewBuilder());
   }
 }
 
@@ -204,8 +206,12 @@ class ListViewBuilder extends StatelessWidget {
                   ),
                 )),
               ),
-            )
-          ]);
+            ),
+          
+          ]
+          
+          );
+          
         });
   }
 }

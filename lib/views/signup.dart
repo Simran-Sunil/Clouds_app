@@ -67,7 +67,7 @@ class _SignUpState extends State<SignUp> {
               child: Container(
                 height: MediaQuery.of(context).size.height - 50,
                 alignment: Alignment.bottomCenter,
-                child: Container(
+                child: SingleChildScrollView(
                   padding: EdgeInsets.symmetric(horizontal: 24),
                   child: Column(mainAxisSize: MainAxisSize.min, children: [
                     Form(
@@ -84,6 +84,9 @@ class _SignUpState extends State<SignUp> {
                             style: simpleTextStyle(),
                             decoration: textFieldInputDecoration("Username"),
                           ),
+                          SizedBox(
+                      height: 8.0,
+                    ),
                           TextFormField(
                             validator: (val) {
                               return RegExp(
@@ -96,6 +99,9 @@ class _SignUpState extends State<SignUp> {
                             style: simpleTextStyle(),
                             decoration: textFieldInputDecoration("Email"),
                           ),
+                          SizedBox(
+                      height: 8.0,
+                    ),
                           TextFormField(
                             obscureText: true,
                             validator: (val) {
@@ -115,18 +121,18 @@ class _SignUpState extends State<SignUp> {
                     SizedBox(
                       height: 8.0,
                     ),
-                    Container(
-                        alignment: Alignment.centerRight,
-                        child: Container(
-                          padding:
-                              EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                          child: Text(
-                            "Forgot Password?",
-                            style: simpleTextStyle(),
-                          ),
-                        )),
+                    // Container(
+                    //     alignment: Alignment.centerRight,
+                    //     child: Container(
+                    //       padding:
+                    //           EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                    //       child: Text(
+                    //         "Forgot Password?",
+                    //         style: simpleTextStyle(),
+                    //       ),
+                    //     )),
                     SizedBox(
-                      height: 8.0,
+                      height: 50.0,
                     ),
                     GestureDetector(
                       onTap: () {
@@ -150,23 +156,23 @@ class _SignUpState extends State<SignUp> {
                       ),
                     ),
                     SizedBox(
-                      height: 16.0,
+                      height: 8.0,
                     ),
-                    Container(
-                      alignment: Alignment.center,
-                      width: MediaQuery.of(context).size.width,
-                      padding: EdgeInsets.symmetric(vertical: 20),
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(30)),
-                      child: Text(
-                        "Sign Up with Google",
-                        style: TextStyle(
-                          color: Colors.black87,
-                          fontSize: 17,
-                        ),
-                      ),
-                    ),
+                    // Container(
+                    //   alignment: Alignment.center,
+                    //   width: MediaQuery.of(context).size.width,
+                    //   padding: EdgeInsets.symmetric(vertical: 20),
+                    //   decoration: BoxDecoration(
+                    //       color: Colors.white,
+                    //       borderRadius: BorderRadius.circular(30)),
+                    //   child: Text(
+                    //     "Sign Up with Google",
+                    //     style: TextStyle(
+                    //       color: Colors.black87,
+                    //       fontSize: 17,
+                    //     ),
+                    //   ),
+                    // ),
                     SizedBox(height: 16),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,

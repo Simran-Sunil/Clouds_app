@@ -100,20 +100,20 @@ class _SecondpageState extends State<SecondPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: new Drawer(
-        child: ListView(
-          children: <Widget>[
-            ListTile(
-              title: Text("Policies"),
-              trailing: Icon(Icons.arrow_forward),
-            ),
-            ListTile(
-              title: Text("Logout"),
-              trailing: Icon(Icons.arrow_forward),
-            ),
-          ],
-        ),
-      ),
+  //     drawer: new Drawer(
+  // child: ListView(
+  //         children: <Widget>[
+  //           ListTile(
+  //             title: Text("Policies"),
+  //             trailing: Icon(Icons.arrow_forward),
+  //           ),
+  //           ListTile(
+  //             title: Text("Logout"),
+  //             trailing: Icon(Icons.arrow_forward),
+  //           ),
+  //         ],
+  //       ),
+  //     ),
       backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.deepPurple,
@@ -144,6 +144,7 @@ class _SecondpageState extends State<SecondPage> {
                           color: Colors.white,
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
+                          
                         ),
                       ),
                     ),

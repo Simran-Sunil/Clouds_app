@@ -67,9 +67,9 @@ class _SignInState extends State<SignIn> {
         child: Container(
           height: MediaQuery.of(context).size.height - 50,
           alignment: Alignment.bottomCenter,
-          child: Container(
+          child: SingleChildScrollView(
             padding: EdgeInsets.symmetric(horizontal: 24),
-            child: Column(
+              child:Column(
               mainAxisSize: MainAxisSize.min, children: [
               Form(
                 key: formKey,
@@ -87,6 +87,9 @@ class _SignInState extends State<SignIn> {
                       controller: emailTextEditingController,
                       style: simpleTextStyle(),
                       decoration: textFieldInputDecoration("Email"),
+                    ),
+                    SizedBox(
+height: 8.0,
                     ),
                     TextFormField(
                       obscureText: true,
@@ -107,17 +110,17 @@ class _SignInState extends State<SignIn> {
               SizedBox(
                 height: 8.0,
               ),
-              Container(
-                  alignment: Alignment.centerRight,
-                  child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                    child: Text(
-                      "Forgot Password?",
-                      style: simpleTextStyle(),
-                    ),
-                  )),
+              // Container(
+              //     alignment: Alignment.centerRight,
+              //     child: Container(
+              //       padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              //       child: Text(
+              //         "Forgot Password?",
+              //         style: simpleTextStyle(),
+              //       ),
+              //     )),
               SizedBox(
-                height: 8.0,
+                height: 70.0,
               ),
               GestureDetector(
                 onTap: () {
@@ -140,23 +143,23 @@ class _SignInState extends State<SignIn> {
                 ),
               ),
               SizedBox(
-                height: 16.0,
+                height: 20.0,
               ),
-              Container(
-                alignment: Alignment.center,
-                width: MediaQuery.of(context).size.width,
-                padding: EdgeInsets.symmetric(vertical: 20),
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(30)),
-                child: Text(
-                  "Sign In with Google",
-                  style: TextStyle(
-                    color: Colors.black87,
-                    fontSize: 17,
-                  ),
-                ),
-              ),
+              // Container(
+              //   alignment: Alignment.center,
+              //   width: MediaQuery.of(context).size.width,
+              //   padding: EdgeInsets.symmetric(vertical: 20),
+              //   decoration: BoxDecoration(
+              //       color: Colors.white,
+              //       borderRadius: BorderRadius.circular(30)),
+              //   child: Text(
+              //     "Sign In with Google",
+              //     style: TextStyle(
+              //       color: Colors.black87,
+              //       fontSize: 17,
+              //     ),
+              //   ),
+              // ),
               SizedBox(height: 16),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -187,6 +190,7 @@ class _SignInState extends State<SignIn> {
           ),
         ),
       ),
+      
     );
   }
 }
