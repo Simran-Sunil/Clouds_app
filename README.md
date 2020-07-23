@@ -1,4 +1,4 @@
-# stars_and_clouds
+# Clouds App
 
 A new Flutter project.
 
