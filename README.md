@@ -1,16 +1,8 @@
 # Clouds App
 
-A new Flutter project.
+![main_page](https://user-images.githubusercontent.com/64013950/88262091-2c3d1880-cce5-11ea-94b3-c662eeadb165.jpeg)  
+![home](https://user-images.githubusercontent.com/64013950/88262326-9b1a7180-cce5-11ea-9fde-ff7ac14e1850.jpeg)
+![notes](https://user-images.githubusercontent.com/64013950/88276221-4d5d3380-ccfc-11ea-9746-53ba4349c490.jpeg)
+![chat](https://user-images.githubusercontent.com/64013950/88276353-88f7fd80-ccfc-11ea-8716-a83edcea1538.jpeg)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
