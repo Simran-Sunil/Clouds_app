@@ -44,9 +44,9 @@ class _State extends State<OfficeBearers> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/hod.jpeg",
                                   ),
-                                  Text("Darshan"),
+                                  Text("Dr JV Gorabal"),
                                 ],
                               ),
                             );
@@ -55,17 +55,18 @@ class _State extends State<OfficeBearers> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        new  Padding(padding: const EdgeInsets.all(6.0),
-                        child: Text(
-                          '        Vice President',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.orangeAccent,
-                            fontFamily: 'Parisienne',
-                            fontSize: 29,
-                            fontWeight: FontWeight.bold,
+                        new Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Text(
+                            '            President',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.orangeAccent,
+                              fontFamily: 'Parisienne',
+                              fontSize: 29,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
                         ),
                       ],
                     ),
@@ -90,7 +91,101 @@ class _State extends State<OfficeBearers> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/shailesh.jpeg",
+                                  ),
+                                  Text("Shailesh Shetty S"),
+                                ],
+                              ),
+                            );
+                          });
+                    },
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        new Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Text(
+                            '       Cloud Coordinator',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.orangeAccent,
+                              fontFamily: 'Parisienne',
+                              fontSize: 29,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            new Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
+              ),
+              color: Colors.black,
+              child: new Row(
+                children: <Widget>[
+                  InkWell(
+                    onTap: () {
+                      showDialog(
+                          context: context,
+                          builder: (context) {
+                            return AlertDialog(
+                              content: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  Image.asset(
+                                    "assets/darshan.jpeg",
+                                  ),
+                                  Text("Darshan"),
+                                ],
+                              ),
+                            );
+                          });
+                    },
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        new Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Text(
+                            '        Vice President',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.orangeAccent,
+                              fontFamily: 'Parisienne',
+                              fontSize: 29,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            new Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
+              ),
+              color: Colors.black,
+              child: new Row(
+                children: <Widget>[
+                  InkWell(
+                    onTap: () {
+                      showDialog(
+                          context: context,
+                          builder: (context) {
+                            return AlertDialog(
+                              content: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  Image.asset(
+                                    "assets/anvitha.jpeg",
                                   ),
                                   Text("Anvitha"),
                                 ],
@@ -101,17 +196,18 @@ class _State extends State<OfficeBearers> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        new  Padding(padding: const EdgeInsets.all(6.0),
-                        child:Text(
-                          '            Secretary',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.orangeAccent,
-                            fontFamily: 'Parisienne',
-                            fontSize: 29,
-                            fontWeight: FontWeight.bold,
+                        new Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Text(
+                            '            Secretary',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.orangeAccent,
+                              fontFamily: 'Parisienne',
+                              fontSize: 29,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
                         ),
                       ],
                     ),
@@ -136,7 +232,7 @@ class _State extends State<OfficeBearers> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/varnitha.jpeg",
                                   ),
                                   Text("Varnitha"),
                                 ],
@@ -147,17 +243,18 @@ class _State extends State<OfficeBearers> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        new  Padding(padding: const EdgeInsets.all(6.0),
-                        child: Text(
-                          '            Treasurer',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.orangeAccent,
-                            fontFamily: 'Parisienne',
-                            fontSize: 29,
-                            fontWeight: FontWeight.bold,
+                        new Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Text(
+                            '            Treasurer',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.orangeAccent,
+                              fontFamily: 'Parisienne',
+                              fontSize: 29,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
                         ),
                       ],
                     ),
@@ -179,42 +276,35 @@ class _State extends State<OfficeBearers> {
                           context: context,
                           builder: (context) {
                             return AlertDialog(
-                              content: GridView(
-                                padding: const EdgeInsets.all(15),
-
-                                gridDelegate:
-                                    SliverGridDelegateWithFixedCrossAxisCount(
-                                        crossAxisCount: 2, mainAxisSpacing: 10),
-
-                                // mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  Image.asset(
-                                    "assets/person.png",
-                                  ),
-                                  Image.asset(
-                                    "assets/person.png",
-                                  ),
-                                  Text("Shravya"),
-                                  Text("Samrutha"),
-                                ],
+                                title: Column(children: <Widget>[
+                              Image.asset(
+                                "assets/shravya.jpeg",
                               ),
-                            );
+                              Text("Shravya"),
+                              SizedBox(height: 10),
+                              Image.asset(
+                                "assets/sampreetha2.jpeg",
+                                height: 250,
+                              ),
+                              Text("Sampreetha"),
+                            ]));
                           });
                     },
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        new  Padding(padding: const EdgeInsets.all(6.0),
-                        child: Text(
-                          '  Joint Treasurer',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.orangeAccent,
-                            fontFamily: 'Parisienne',
-                            fontSize: 29,
-                            fontWeight: FontWeight.bold,
+                        new Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Text(
+                            '  Joint Treasurer',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.orangeAccent,
+                              fontFamily: 'Parisienne',
+                              fontSize: 29,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
                         ),
                       ],
                     ),
@@ -242,21 +332,21 @@ class _State extends State<OfficeBearers> {
                                 //  mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/hod.jpeg",
                                   ),
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/vasu_d.jpeg",
                                   ),
                                   Text("Souravi"),
-                                  Text("Vasu Krishna"),
+                                  Text("    Vasu Krishna"),
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/pushparaj.jpeg",
                                   ),
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/saket.jpeg",
                                   ),
-                                  Text("Pushparaj"),
-                                  Text("Saket"),
+                                  Text("   Pushparaj"),
+                                  Text("   Saket"),
                                 ],
                               ),
                             );
@@ -265,17 +355,18 @@ class _State extends State<OfficeBearers> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        new  Padding(padding: const EdgeInsets.all(6.0),
-                        child: Text(
-                          '       Event Coordinator',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.orangeAccent,
-                            fontFamily: 'Parisienne',
-                            fontSize: 29,
-                            fontWeight: FontWeight.bold,
+                        new Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Text(
+                            '       Event Coordinator',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.orangeAccent,
+                              fontFamily: 'Parisienne',
+                              fontSize: 29,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
                         ),
                       ],
                     ),
@@ -300,24 +391,24 @@ class _State extends State<OfficeBearers> {
                                 gridDelegate:
                                     SliverGridDelegateWithFixedCrossAxisCount(
                                         crossAxisCount: 2),
-                              //  mainAxisSize: MainAxisSize.min,
+                                //  mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/prerana.jpeg",
                                   ),
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/sanjana.jpeg",
                                   ),
-                                  Text("Prerana"),
-                                  Text("Sanjana"),
+                                  Text("       Prerana"),
+                                  Text("       Sanjana"),
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/apeksha.jpeg",
                                   ),
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/anvitha.jpeg",
                                   ),
-                                  Text("Apeksha"),
-                                  Text("Ankitha"),
+                                  Text("    Apeksha"),
+                                  Text("    Anvitha"),
                                 ],
                               ),
                             );
@@ -326,17 +417,18 @@ class _State extends State<OfficeBearers> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        new  Padding(padding: const EdgeInsets.all(6.0),
-                        child:Text(
-                          '       Cultural Secretary',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.orangeAccent,
-                            fontFamily: 'Parisienne',
-                            fontSize: 29,
-                            fontWeight: FontWeight.bold,
+                        new Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Text(
+                            '       Cultural Secretary',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.orangeAccent,
+                              fontFamily: 'Parisienne',
+                              fontSize: 29,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
                         ),
                       ],
                     ),
@@ -360,14 +452,14 @@ class _State extends State<OfficeBearers> {
                               content: GridView(
                                 gridDelegate:
                                     SliverGridDelegateWithFixedCrossAxisCount(
-                                        crossAxisCount: 2),
-                                  //mainAxisSize: MainAxisSize.min,
+                                        crossAxisCount: 1),
+                                //mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/divya.jpeg",
                                   ),
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/nihal.jpeg",
                                   ),
                                   Text("Divya"),
                                   Text("Nihal"),
@@ -379,17 +471,18 @@ class _State extends State<OfficeBearers> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        new  Padding(padding: const EdgeInsets.all(6.0),
-                        child: Text(
-                          '   Joint Cultural Secretary',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.orangeAccent,
-                            fontFamily: 'Parisienne',
-                            fontSize: 29,
-                            fontWeight: FontWeight.bold,
+                        new Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Text(
+                            '   Joint Cultural Secretary',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.orangeAccent,
+                              fontFamily: 'Parisienne',
+                              fontSize: 29,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
                         ),
                       ],
                     ),
@@ -420,14 +513,13 @@ class _State extends State<OfficeBearers> {
                                     "assets/person.png",
                                   ),
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/karthik.jpeg",
                                   ),
                                   Text("Mithali"),
                                   Text("Karthik Adyar"),
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/samad.jpeg",
                                   ),
-                                  
                                   Text("Samad"),
                                 ],
                               ),
@@ -437,17 +529,18 @@ class _State extends State<OfficeBearers> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        new  Padding(padding: const EdgeInsets.all(6.0),
-                       child: Text(
-                          '        Sports Secretary',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.orangeAccent,
-                            fontFamily: 'Parisienne',
-                            fontSize: 29,
-                            fontWeight: FontWeight.bold,
+                        new Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Text(
+                            '        Sports Secretary',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.orangeAccent,
+                              fontFamily: 'Parisienne',
+                              fontSize: 29,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
                         ),
                       ],
                     ),
@@ -475,15 +568,15 @@ class _State extends State<OfficeBearers> {
                                 //  mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/renil.jpeg",
                                   ),
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/akesh.jpeg",
                                   ),
                                   Text("Reniel"),
                                   Text("Akesh"),
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/vaishakms.jpeg",
                                   ),
                                   Text("Vaishak"),
                                 ],
@@ -494,17 +587,18 @@ class _State extends State<OfficeBearers> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        new  Padding(padding: const EdgeInsets.all(6.0),
-                      child: Text(
-                          '    Joint Sports Secretary',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.orangeAccent,
-                            fontFamily: 'Parisienne',
-                            fontSize: 29,
-                            fontWeight: FontWeight.bold,
+                        new Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Text(
+                            '    Joint Sports Secretary',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.orangeAccent,
+                              fontFamily: 'Parisienne',
+                              fontSize: 29,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
                         ),
                       ],
                     ),
@@ -532,10 +626,10 @@ class _State extends State<OfficeBearers> {
                                 //  mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/hod.jpeg",
                                   ),
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/meghana.jpeg",
                                   ),
                                   Text("Shreyas"),
                                   Text("Meghana"),
@@ -547,17 +641,18 @@ class _State extends State<OfficeBearers> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        new  Padding(padding: const EdgeInsets.all(6.0),
-                        child: Text(
-                          '       Techical Secretary',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.orangeAccent,
-                            fontFamily: 'Parisienne',
-                            fontSize: 29,
-                            fontWeight: FontWeight.bold,
+                        new Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Text(
+                            '       Techical Secretary',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.orangeAccent,
+                              fontFamily: 'Parisienne',
+                              fontSize: 29,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
                         ),
                       ],
                     ),
@@ -585,14 +680,14 @@ class _State extends State<OfficeBearers> {
                                 //  mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/shravya.jpeg",
                                   ),
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/swathi.jpeg",
                                   ),
                                   Text("Shravya"),
                                   Text("Swathishree"),
-                                  Image.asset("assets/person.png"),
+                                  Image.asset("hod.jpeg"),
                                   Text("Sanath"),
                                 ],
                               ),
@@ -602,16 +697,17 @@ class _State extends State<OfficeBearers> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        new  Padding(padding: const EdgeInsets.all(6.0),
-                        child: Text(
-                          '   Joint Techical Secretary',
-                          style: TextStyle(
-                            color: Colors.orangeAccent,
-                            fontFamily: 'Parisienne',
-                            fontSize: 29,
-                            fontWeight: FontWeight.bold,
+                        new Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Text(
+                            '   Joint Techical Secretary',
+                            style: TextStyle(
+                              color: Colors.orangeAccent,
+                              fontFamily: 'Parisienne',
+                              fontSize: 29,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
                         ),
                       ],
                     ),
@@ -639,13 +735,13 @@ class _State extends State<OfficeBearers> {
                                 //  mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/manisha.jpeg",
                                   ),
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/bhargavi_bhat.jpeg",
                                   ),
                                   Text("Manisha Kottari"),
-                                  Text("Bharavi"),
+                                  Text("Bhargavi"),
                                 ],
                               ),
                             );
@@ -654,16 +750,17 @@ class _State extends State<OfficeBearers> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        new  Padding(padding: const EdgeInsets.all(6.0),
-                        child: Text(
-                          '    Placement Coordinator',
-                          style: TextStyle(
-                            color: Colors.orangeAccent,
-                            fontFamily: 'Parisienne',
-                            fontSize: 29,
-                            fontWeight: FontWeight.bold,
+                        new Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Text(
+                            '    Placement Coordinator',
+                            style: TextStyle(
+                              color: Colors.orangeAccent,
+                              fontFamily: 'Parisienne',
+                              fontSize: 29,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
                         ),
                       ],
                     ),
@@ -691,15 +788,15 @@ class _State extends State<OfficeBearers> {
                                 //  mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/maruthi.jpeg",
                                   ),
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/ramyashree.jpeg",
                                   ),
                                   Text("Maruthi"),
                                   Text("Ramyashree"),
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/pooja.jpeg",
                                   ),
                                   Text("Pooja PS"),
                                 ],
@@ -710,16 +807,17 @@ class _State extends State<OfficeBearers> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        new  Padding(padding: const EdgeInsets.all(6.0),
-                        child: Text(
-                          ' Joint Placement Coordinator',
-                          style: TextStyle(
-                            color: Colors.orangeAccent,
-                            fontFamily: 'Parisienne',
-                            fontSize: 27,
-                            fontWeight: FontWeight.bold,
+                        new Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Text(
+                            ' Joint Placement Coordinator',
+                            style: TextStyle(
+                              color: Colors.orangeAccent,
+                              fontFamily: 'Parisienne',
+                              fontSize: 27,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
                         ),
                       ],
                     ),
@@ -747,10 +845,10 @@ class _State extends State<OfficeBearers> {
                                 //  mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/deepak.jpeg",
                                   ),
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/prathiksha_hedge.jpeg",
                                   ),
                                   Text("Deepak"),
                                   Text("Pratheeksha"),
@@ -762,16 +860,17 @@ class _State extends State<OfficeBearers> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        new  Padding(padding: const EdgeInsets.all(6.0),
-                        child: Text(
-                          '       Journal Secretary',
-                          style: TextStyle(
-                            color: Colors.orangeAccent,
-                            fontFamily: 'Parisienne',
-                            fontSize: 29,
-                            fontWeight: FontWeight.bold,
+                        new Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Text(
+                            '       Journal Secretary',
+                            style: TextStyle(
+                              color: Colors.orangeAccent,
+                              fontFamily: 'Parisienne',
+                              fontSize: 29,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
                         ),
                       ],
                     ),
@@ -799,10 +898,10 @@ class _State extends State<OfficeBearers> {
                                 //  mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/sinchana.jpeg",
                                   ),
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/erin.jpeg",
                                   ),
                                   Text("Sinchana"),
                                   Text("Erin"),
@@ -814,16 +913,17 @@ class _State extends State<OfficeBearers> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        new  Padding(padding: const EdgeInsets.all(6.0),
-                        child: Text(
-                          '   Joint Journal Secretary',
-                          style: TextStyle(
-                            color: Colors.orangeAccent,
-                            fontFamily: 'Parisienne',
-                            fontSize: 29,
-                            fontWeight: FontWeight.bold,
+                        new Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Text(
+                            '   Joint Journal Secretary',
+                            style: TextStyle(
+                              color: Colors.orangeAccent,
+                              fontFamily: 'Parisienne',
+                              fontSize: 29,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
                         ),
                       ],
                     ),
@@ -851,10 +951,10 @@ class _State extends State<OfficeBearers> {
                                 //  mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/sinchana.jpeg",
                                   ),
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/erin.jpeg",
                                   ),
                                   Text("Sinchana"),
                                   Text("Erin"),
@@ -866,16 +966,17 @@ class _State extends State<OfficeBearers> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        new  Padding(padding: const EdgeInsets.all(6.0),
-                        child: Text(
-                          '     Brand Ambassader',
-                          style: TextStyle(
-                            color: Colors.orangeAccent,
-                            fontFamily: 'Parisienne',
-                            fontSize: 29,
-                            fontWeight: FontWeight.bold,
+                        new Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Text(
+                            '     Brand Ambassader',
+                            style: TextStyle(
+                              color: Colors.orangeAccent,
+                              fontFamily: 'Parisienne',
+                              fontSize: 29,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
                         ),
                       ],
                     ),
@@ -903,15 +1004,15 @@ class _State extends State<OfficeBearers> {
                                 //  mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/hod.jpeg",
                                   ),
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/hod.jpeg",
                                   ),
                                   Text("Sandeep"),
                                   Text("Reshma Kumari"),
-                                  Image.asset("assets/person.png"),
-                                  Image.asset("assets/person.png"),
+                                  Image.asset("assets/hod.jpeg"),
+                                  Image.asset("assets/hod.jpeg"),
                                   Text("Shriyan"),
                                   Text("Raees"),
                                 ],
@@ -922,16 +1023,17 @@ class _State extends State<OfficeBearers> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        new  Padding(padding: const EdgeInsets.all(6.0),
-                        child: Text(
-                          '  Graphics/Design/Media',
-                          style: TextStyle(
-                            color: Colors.orangeAccent,
-                            fontFamily: 'Parisienne',
-                            fontSize: 29,
-                            fontWeight: FontWeight.bold,
+                        new Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Text(
+                            '  Graphics/Design/Media',
+                            style: TextStyle(
+                              color: Colors.orangeAccent,
+                              fontFamily: 'Parisienne',
+                              fontSize: 29,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
                         ),
                       ],
                     ),
@@ -959,16 +1061,15 @@ class _State extends State<OfficeBearers> {
                                 //  mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/hod.jpeg",
                                   ),
                                   Image.asset(
-                                    "assets/person.png",
+                                    "assets/hod.jpeg",
                                   ),
                                   Text("Tushar Shetty"),
                                   Text("Vikranth"),
-                                  Image.asset("assets/person.png"),
-                                  
-                                  Image.asset("assets/person.png"),
+                                  Image.asset("assets/hod.jpeg"),
+                                  Image.asset("assets/hod.jpeg"),
                                   Text("Vinu"),
                                   Text("Disha Shetty"),
                                 ],
@@ -979,16 +1080,17 @@ class _State extends State<OfficeBearers> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        new  Padding(padding: const EdgeInsets.all(6.0),
-                        child: Text(
-                          ' Documentation & Marketing',
-                          style: TextStyle(
-                            color: Colors.orangeAccent,
-                            fontFamily: 'Parisienne',
-                            fontSize: 26,
-                            fontWeight: FontWeight.bold,
+                        new Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Text(
+                            ' Documentation & Marketing',
+                            style: TextStyle(
+                              color: Colors.orangeAccent,
+                              fontFamily: 'Parisienne',
+                              fontSize: 26,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
                         ),
                       ],
                     ),
@@ -1024,16 +1126,17 @@ class _State extends State<OfficeBearers> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        new  Padding(padding: const EdgeInsets.all(6.0),
-                        child:Text(
-                          '       App Developer',
-                          style: TextStyle(
-                            color: Colors.orangeAccent,
-                            fontFamily: 'Parisienne',
-                            fontSize: 29,
-                            fontWeight: FontWeight.bold,
+                        new Padding(
+                          padding: const EdgeInsets.all(6.0),
+                          child: Text(
+                            '       App Developer',
+                            style: TextStyle(
+                              color: Colors.orangeAccent,
+                              fontFamily: 'Parisienne',
+                              fontSize: 29,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
                         ),
                       ],
                     ),
